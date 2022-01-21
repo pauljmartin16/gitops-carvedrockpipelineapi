@@ -10,7 +10,8 @@ spec:
   defaultBackend:
     service:
       name: carvedrockpipelineapi
-      port: 80
+      port: 
+        number: 80
   rules:
   - host: carved.rock.api
     http:
@@ -18,5 +19,6 @@ spec:
       - backend:
           service:
             name: carvedrockpipelineapi
-            port: 80
+            port: 
+              number: 80
         pathType: ImplementationSpecific
