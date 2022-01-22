@@ -1,7 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: carvedrockapi-configmap
+  name: {{ include "carvedrockpipelineapi.fullname" . }}
+  labels:
+    {{- include "carvedrockpipelineapi.labels" . | nindent 4 }}
 data:
   appsettings.json: |-
     {
