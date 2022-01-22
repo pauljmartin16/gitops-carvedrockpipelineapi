@@ -1,4 +1,4 @@
---- 
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -25,9 +25,9 @@ spec:
         ports:
         - containerPort: 80
         volumeMounts:
-          - name: appsettings-volume
-            mountPath: /app/appsettings.json
-            subPath: appsettings.json
+        - name: appsettings-volume
+          mountPath: /app/appsettings.json
+          subPath: appsettings.json
         env:
         - name: NODE_NAME
           valueFrom:
@@ -46,6 +46,6 @@ spec:
             port: 80
             path: /health/ready
       volumes:
-        - name: appsettings-volume
-          configMap:
-             name: carvedrockapi-configmap
+      - name: appsettings-volume
+        configMap:
+          name: carvedrockapi-configmap
