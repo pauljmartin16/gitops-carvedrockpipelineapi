@@ -7,7 +7,7 @@ metadata:
 spec:
   defaultBackend:
     service:
-      name: carvedrockpipelineapi
+      name: {{ include "carvedrockpipelineapi.fullname" . }}
       port: 
         number: 80
   rules:
@@ -16,7 +16,7 @@ spec:
       paths:
       - backend:
           service:
-            name: carvedrockpipelineapi
+            name: {{ include "carvedrockpipelineapi.fullname" . }}
             port: 
               number: 80
         pathType: ImplementationSpecific
