@@ -9,7 +9,7 @@ spec:
   chart:
     git: ssh://git@github.com/pauljmartin16/gitops-carvedrockpipelineapi.git
     path: helm/chart
-    ref: master
+    ref: main
   rollback:
     enable: true
     retry: true
