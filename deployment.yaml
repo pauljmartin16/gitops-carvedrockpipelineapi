@@ -8,7 +8,7 @@ metadata:
   annotations:
     fluxcd.io/ignore: "false"
     fluxcd.io/automated: "true"
-    # fluxcd.io/tag.carvedrockpipelineapi: semver:~1.19.x
+    fluxcd.io/tag.carvedrockpipelineapi: semver:~1.19.x
 spec:
   replicas: 5
   selector:
@@ -20,7 +20,7 @@ spec:
         app: carvedrockpipelineapi
     spec:
       containers:
-      - image: pauljmartin16/carvedrockpipelineapi:latest
+      - image: pauljmartin16/carvedrockpipelineapi:1.19.0
         name: carvedrockpipelineapi
         ports:
         - containerPort: 80
