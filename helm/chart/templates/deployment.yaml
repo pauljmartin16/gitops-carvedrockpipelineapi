@@ -33,6 +33,10 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+          volumeMounts:
+          - name: appsettings-volume
+            mountPath: /app/appsettings.json
+            subPath: appsettings.json
           env:
           - name: NODE_NAME
             valueFrom:
@@ -56,6 +60,10 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+      - name: appsettings-volume
+        configMap:
+          name: carvedrockapi-configmap
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
