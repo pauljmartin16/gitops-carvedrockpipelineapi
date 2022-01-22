@@ -2,6 +2,9 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: carvedrockapi-configmap
+annotations:
+  fluxcd.io/ignore: "false"
+  fluxcd.io/automated: "true"
 data:
   appsettings.json: |-
     {
