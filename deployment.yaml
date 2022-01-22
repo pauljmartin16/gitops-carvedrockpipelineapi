@@ -24,6 +24,10 @@ spec:
         name: carvedrockpipelineapi
         ports:
         - containerPort: 80
+        volumeMounts:
+          - name: appsettings-volume
+            mountPath: /app/appsettings.json
+            subPath: appsettings.json
         env:
         - name: NODE_NAME
           valueFrom:
@@ -41,3 +45,7 @@ spec:
           httpGet:
             port: 80
             path: /health/ready
+      volumes:
+        - name: appsettings-volume
+          configMap:
+             name: carvedrockapi-configmap
