@@ -10,8 +10,7 @@ data:
           "Default": "Information",
           "Override": {
             "Microsoft": "Warning",
-            "System": "Warning",
-            "HealthChecks": "Warning"
+            "System": "Warning"
           }
         }
       },
