@@ -7,16 +7,16 @@ metadata:
 spec:
   defaultBackend:
     service:
-      name: {{ include "carvedrockpipelineapi.fullname" . }}
+      name: carvedrockpipelineapi
       port: 
-        number: {{ .Values.service.port }}
+        number: 80
   rules:
   - host: carved.rock.api
     http:
       paths:
       - backend:
           service:
-            name: {{ include "carvedrockpipelineapi.fullname" . }}
+            name: carvedrockpipelineapi
             port: 
-              number: {{ .Values.service.port }}
+              number: 80
         pathType: ImplementationSpecific
