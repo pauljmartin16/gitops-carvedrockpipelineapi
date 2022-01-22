@@ -5,8 +5,7 @@ metadata:
   labels:
     app: carvedrockpipelineapi
   annotations:
-    fluxcd.io/ignore: "false"
-    fluxcd.io/automated: "true"
+    fluxcd.io/ignore: "true"
 spec:
   defaultBackend:
     service:
