@@ -1,10 +1,10 @@
-apiVersion: flagger.app/v1beta1
+apiVersion: flagger.app/v1
 kind: Canary
 metadata:
   name: carvedrockpipelineapi-canary
   namespace: default
   annotations:
-    fluxcd.io/ignore: "true"
+    fluxcd.io/ignore: "false"
 spec:
   provider: nginx
   targetRef:
