@@ -2,7 +2,7 @@ apiVersion: v2
 name: carvedrockpipelineapi
 description: A Helm chart for carvedrockpipelineapi workload
 type: application
-version: 1.0.2
+version: 1.0.3
 appVersion: 1.19.0
 sources:
   - https://github.com/<git user>/gitops-carvedrockpipelineapi

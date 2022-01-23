@@ -12,7 +12,7 @@ spec:
     kind: Deployment
     name: default-carvedrockpipelineapi-hr
   ingressRef:
-    apiVersion: networking.k8s.io/v1beta1
+    apiVersion: networking.k8s.io/v1
     kind: Ingress
     name: default-carvedrockpipelineapi-hr
   progressDeadlineSeconds: 180
